@@ -5,11 +5,18 @@
       <div class="input-group-prepend">
         <input
           type="text"
+          #todo
           class="form-control"
           placeholder="Add Todo"
           name="todo"
+          ngModel
         />
-        <span class="input-group-text">Add</span>
+        <span class="input-group-text" (click)="addTodo(todo.value)">Add</span>
+      </div>
+      <div class="data">
+        <ul class="list-instyled">
+          <li *ngFor="let todo of todoArray">{{ todo }}</li>
+        </ul>
       </div>
     </div>
   </form>
