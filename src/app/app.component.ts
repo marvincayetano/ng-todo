@@ -13,4 +13,12 @@ export class AppComponent {
     this.todoArray.push(value);
     console.log(this.todoArray);
   }
+
+  deleteTodo(value: string) {
+    for (let i = 0; i <= this.todoArray.length; i++) {
+      if (value === this.todoArray[i]) {
+        this.todoArray.splice(i, 1);
+      }
+    }
+  }
 }
