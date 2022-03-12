@@ -11,11 +11,15 @@
           name="todo"
           ngModel
         />
-        <span class="input-group-text" (click)="addTodo(todo.value)">Add</span>
+        <span class="input-group-text" (click)="addTodo(todo.value)"
+          ><i class="material-icons">add</i></span
+        >
       </div>
       <div class="data">
         <ul class="list-instyled">
-          <li *ngFor="let todo of todoArray">{{ todo }}</li>
+          <li *ngFor="let todo of todoArray">
+            {{ todo }}<i class="material-icons">delete</i>
+          </li>
         </ul>
       </div>
     </div>
